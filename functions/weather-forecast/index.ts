@@ -23,7 +23,7 @@ serve(async (req) => {
     }
 
     const API_KEY = Deno.env.get('WEATHERAPI_API_KEY');
-    const weatherapiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${lat},${lon}&days=${days}&hour=${hour}&lang${LANG}`
+    const weatherapiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${lat},${lon}&days=${days}&hour=${hour}&lang=${LANG}`
 
     const response = await fetch(weatherapiUrl);
     const data = await response.json();
